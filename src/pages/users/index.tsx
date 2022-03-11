@@ -21,6 +21,7 @@ import { Sidebar } from "../../components/SideBar";
 import { Header } from "../../components/Header";
 import Link from "next/link";
 import { useUsers } from "../../services/hooks/useUsers";
+import { useState } from "react";
 
 type User = {
   id: string;
@@ -30,7 +31,8 @@ type User = {
 };
 
 export default function UserList() {
-  const { data, isLoading, error, isFetching } = useUsers();
+  const [page, setPage] = useState(1);
+  const { data, isLoading, error, isFetching } = useUsers(page);
 
   const isWideVersion = useBreakpointValue({
     base: false,
@@ -85,7 +87,7 @@ export default function UserList() {
                   </Tr>
                 </Thead>
                 <Tbody>
-                  {data.map((user: User) => {
+                  {data.users.map((user: User) => {
                     return (
                       <Tr key={user.id}>
                         <Td px={["4", "4", "6"]}>
@@ -117,7 +119,11 @@ export default function UserList() {
                 </Tbody>
               </Table>
 
-              <Pagination />
+              <Pagination
+                totalCountOfRegister={data.totalCount}
+                currentPage={page}
+                onPageChange={setPage}
+              />
             </>
           )}
         </Box>
