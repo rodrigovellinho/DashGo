@@ -1,19 +1,18 @@
 <h3 align="center">
   DashGo
 </h3>
-
 <br>
 
-## :rocket: Sobre o desafio
+## :rocket:
 
 <p align="center">
-  <img src="" alt="DashGo">
+  <img src="https://github.com/rodrigovellinho/DashGo/blob/main/public/cover1.jpg?raw=true" alt="DashGo">
 </p>
 <p align="center">
-  <img src="" alt="DashGo">
+  <img src="https://github.com/rodrigovellinho/DashGo/blob/main/public/cover2.jpg?raw=true" alt="DashGo">
 </p>
 <p align="center">
-  <img src="" alt="DashGo">
+  <img src="https://github.com/rodrigovellinho/DashGo/blob/main/public/cover3.jpg?raw=true" alt="DashGo">
 </p>
 
 DashGo é um dashboard gerencial, onde é possível visualizar gráficos, cadastrar novos usuários e gerenciar estes usuários.
